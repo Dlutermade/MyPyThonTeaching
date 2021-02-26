@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>深入邏輯運算操作 | PyThon教學</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="PyThonAndC++">
+    <link rel="preload" href="/MyPyThonTeaching/assets/css/0.styles.04a0942c.css" as="style"><link rel="preload" href="/MyPyThonTeaching/assets/js/app.f3386733.js" as="script"><link rel="preload" href="/MyPyThonTeaching/assets/js/2.4d2fb9ce.js" as="script"><link rel="preload" href="/MyPyThonTeaching/assets/js/24.e9be4cd3.js" as="script"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/10.633e779a.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/11.fe0c38f3.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/12.37d34a44.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/13.c9cb1510.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/14.a5e697b3.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/15.13d4759b.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/16.9fb459c3.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/17.542639d4.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/18.34984bcb.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/19.3ef70e01.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/20.305cce5e.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/21.45207145.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/22.9feda178.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/23.5c2e819e.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/25.505ed8f4.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/26.101f435f.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/3.f044cf85.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/4.1b270202.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/5.6297e365.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/6.260e35e6.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/7.c89b00d4.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/8.2646f041.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/9.ed080d30.js">
+    <link rel="stylesheet" href="/MyPyThonTeaching/assets/css/0.styles.04a0942c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/MyPyThonTeaching/" class="home-link router-link-active"><!----> <span class="site-name">PyThon教學</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/MyPyThonTeaching/" aria-current="page" class="sidebar-link">首頁</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>說明</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>起步</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>語法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>深入</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/MyPyThonTeaching/Thorough/Type.html" class="sidebar-link">型別</a></li><li><a href="/MyPyThonTeaching/Thorough/Logic.html" aria-current="page" class="active sidebar-link">邏輯運算操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/MyPyThonTeaching/Thorough/Logic.html#深入邏輯運算操作" class="sidebar-link">深入邏輯運算操作</a></li><li class="sidebar-sub-header"><a href="/MyPyThonTeaching/Thorough/Logic.html#not-反閘" class="sidebar-link">Not 反閘</a></li><li class="sidebar-sub-header"><a href="/MyPyThonTeaching/Thorough/Logic.html#or-或閘" class="sidebar-link">Or 或閘</a></li><li class="sidebar-sub-header"><a href="/MyPyThonTeaching/Thorough/Logic.html#and-及閘" class="sidebar-link">And 及閘</a></li><li class="sidebar-sub-header"><a href="/MyPyThonTeaching/Thorough/Logic.html#xor-互斥或閘" class="sidebar-link">Xor 互斥或閘</a></li></ul></li><li><a href="/MyPyThonTeaching/Thorough/StrongAndWeak.html" class="sidebar-link">強型別與弱型別</a></li><li><a href="/MyPyThonTeaching/Thorough/For.html" class="sidebar-link">For迴圈</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="深入邏輯運算操作"><a href="#深入邏輯運算操作" class="header-anchor">#</a> 深入邏輯運算操作</h2> <p>在程式世界中除了Not、Or、And還有Xor</p> <div class="custom-block warning"><p class="custom-block-title">必須先了解的事情</p> <p>True轉成Number是1
+<br>
+False轉成Number是0
+<br>
+0轉成Boolean是False
+<br>
+非0轉成Boolean是True</p></div> <h2 id="not-反閘"><a href="#not-反閘" class="header-anchor">#</a> Not 反閘</h2> <p>Not是唯一必然產生True或是False的邏輯符</p> <p>遇到數字先轉Boolean在作Not運算。</p> <p>語法</p> <table><thead><tr><th>C++</th> <th>PyThon</th></tr></thead> <tbody><tr><td>!</td> <td>not</td></tr></tbody></table> <blockquote><p>在C++世界中有一個 ~ 也是Not但是是根據Type長度轉成0和1反過來比如 短正整數 3 會變成 65533 因為短正整數最大是65535</p></blockquote> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token keyword">not</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token keyword">not</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token keyword">not</span> <span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>大家猜看看結果(請利用上述提示)</p> <details class="custom-block details"><summary>點擊查看結果</summary> <p>步驟1先轉Boolean</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token keyword">not</span> <span class="token boolean">False</span>
+<span class="token keyword">not</span> <span class="token boolean">True</span>
+<span class="token keyword">not</span> <span class="token boolean">True</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>步驟2進行反轉並印出</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token boolean">True</span>
+<span class="token boolean">False</span>
+<span class="token boolean">False</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></details> <h2 id="or-或閘"><a href="#or-或閘" class="header-anchor">#</a> Or 或閘</h2> <p>Or數字轉二進位，任一邊是1則是1，否則為0</p> <p>語法</p> <table><thead><tr><th>C++</th> <th>PyThon</th></tr></thead> <tbody><tr><td>||</td> <td>or</td></tr></tbody></table> <div class="custom-block warning"><p class="custom-block-title">注意</p> <p>c++有區分Number的or或是Boolean的or</p> <ol><li>|是Number的</li> <li>||是Boolean的</li></ol></div> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token keyword">or</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token keyword">or</span> <span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">7</span> <span class="token keyword">or</span> <span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>大家猜看看結果(請利用上述提示)</p> <details class="custom-block details"><summary>點擊查看結果</summary> <p>步驟1轉二進位</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token number">1010</span>
+<span class="token number">0100</span>
+
+<span class="token number">1010</span>
+<span class="token number">1010</span>
+
+<span class="token number">101</span>
+<span class="token number">010</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>步驟2合併</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token number">1110</span>
+
+<span class="token number">1010</span>
+
+<span class="token number">111</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>步驟3轉十進位即印出</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token number">14</span>
+
+<span class="token number">10</span>
+
+<span class="token number">9</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></details> <h2 id="and-及閘"><a href="#and-及閘" class="header-anchor">#</a> And 及閘</h2> <p>And數字轉二進位，兩邊是1則是1，否則為0</p> <p>語法</p> <table><thead><tr><th>C++</th> <th>PyThon</th></tr></thead> <tbody><tr><td>&amp;&amp;</td> <td>and</td></tr></tbody></table> <div class="custom-block warning"><p class="custom-block-title">注意</p> <p>c++有區分Number的and或是Boolean的and</p> <ol><li>&amp;是Number的</li> <li>&amp;&amp;是Boolean的</li></ol></div> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">12</span> <span class="token keyword">and</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token keyword">and</span> <span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">7</span> <span class="token keyword">and</span> <span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>大家猜看看結果(請利用上述提示)</p> <details class="custom-block details"><summary>點擊查看結果</summary> <p>步驟1轉二進位</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token number">1100</span>
+<span class="token number">0100</span>
+
+<span class="token number">1010</span>
+<span class="token number">1010</span>
+
+<span class="token number">101</span>
+<span class="token number">010</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>步驟2合併</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token number">0100</span>
+
+<span class="token number">1010</span>
+
+<span class="token number">000</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>步驟3轉十進位即印出</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token number">6</span>
+
+<span class="token number">10</span>
+
+<span class="token number">0</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></details> <h2 id="xor-互斥或閘"><a href="#xor-互斥或閘" class="header-anchor">#</a> Xor 互斥或閘</h2> <p>Xor 是指兩邊不同成立，一樣不成立</p> <p>Xor有分兩種Number的Xor，Boolean的Xor</p> <p>語法上PyThon和C++通用。</p> <p>語法</p> <blockquote><p>Boolean的 != 是利用兩邊值不同所推論出來的</p></blockquote> <table><thead><tr><th>Number</th> <th>Boolean</th></tr></thead> <tbody><tr><td>^</td> <td>a != b</td></tr></tbody></table> <div class="custom-block tip"><p class="custom-block-title">語法編沒有原因</p> <p>Xor用到機會很少，且難度最高</p></div> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">12</span> <span class="token operator">^</span> <span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">10</span> <span class="token operator">^</span> <span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token number">7</span> <span class="token operator">^</span> <span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>大家猜看看結果(請利用上述提示)</p> <details class="custom-block details"><summary>點擊查看結果</summary> <p>步驟1轉二進位</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token number">1100</span>
+<span class="token number">0100</span>
+
+<span class="token number">1010</span>
+<span class="token number">1010</span>
+
+<span class="token number">101</span>
+<span class="token number">010</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>步驟2合併</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token number">1000</span>
+
+<span class="token number">0</span>
+
+<span class="token number">111</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>步驟3轉十進位即印出</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token number">8</span>
+
+<span class="token number">0</span>
+
+<span class="token number">7</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div></details></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/MyPyThonTeaching/Thorough/Type.html" class="prev">
+        型別
+      </a></span> <span class="next"><a href="/MyPyThonTeaching/Thorough/StrongAndWeak.html">
+        強型別與弱型別
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/MyPyThonTeaching/assets/js/app.f3386733.js" defer></script><script src="/MyPyThonTeaching/assets/js/2.4d2fb9ce.js" defer></script><script src="/MyPyThonTeaching/assets/js/24.e9be4cd3.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>串列 | PyThon教學</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="PyThonAndC++">
+    <link rel="preload" href="/MyPyThonTeaching/assets/css/0.styles.04a0942c.css" as="style"><link rel="preload" href="/MyPyThonTeaching/assets/js/app.f3386733.js" as="script"><link rel="preload" href="/MyPyThonTeaching/assets/js/2.4d2fb9ce.js" as="script"><link rel="preload" href="/MyPyThonTeaching/assets/js/12.37d34a44.js" as="script"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/10.633e779a.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/11.fe0c38f3.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/13.c9cb1510.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/14.a5e697b3.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/15.13d4759b.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/16.9fb459c3.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/17.542639d4.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/18.34984bcb.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/19.3ef70e01.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/20.305cce5e.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/21.45207145.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/22.9feda178.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/23.5c2e819e.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/24.e9be4cd3.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/25.505ed8f4.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/26.101f435f.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/3.f044cf85.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/4.1b270202.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/5.6297e365.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/6.260e35e6.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/7.c89b00d4.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/8.2646f041.js"><link rel="prefetch" href="/MyPyThonTeaching/assets/js/9.ed080d30.js">
+    <link rel="stylesheet" href="/MyPyThonTeaching/assets/css/0.styles.04a0942c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/MyPyThonTeaching/" class="home-link router-link-active"><!----> <span class="site-name">PyThon教學</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/MyPyThonTeaching/" aria-current="page" class="sidebar-link">首頁</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>說明</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>起步</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>語法</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/MyPyThonTeaching/Grammar/IO.html" class="sidebar-link">認識輸入輸出</a></li><li><a href="/MyPyThonTeaching/Grammar/Variable.html" class="sidebar-link">變數</a></li><li><a href="/MyPyThonTeaching/Grammar/NamingConventions.html" class="sidebar-link">命名原則</a></li><li><a href="/MyPyThonTeaching/Grammar/Operator.html" class="sidebar-link">操作符</a></li><li><a href="/MyPyThonTeaching/Grammar/Conditional.html" class="sidebar-link">條件判斷</a></li><li><a href="/MyPyThonTeaching/Grammar/AdvancedIO.html" class="sidebar-link">進階輸入輸出</a></li><li><a href="/MyPyThonTeaching/Grammar/LoopFor.html" class="sidebar-link">迴圈 - 1 :For</a></li><li><a href="/MyPyThonTeaching/Grammar/LoopWhile.html" class="sidebar-link">迴圈 - 2 :While</a></li><li><a href="/MyPyThonTeaching/Grammar/LoopProblem.html" class="sidebar-link">迴圈 - 3 :題目們</a></li><li><a href="/MyPyThonTeaching/Grammar/Container.html" class="sidebar-link">認識容器</a></li><li><a href="/MyPyThonTeaching/Grammar/List.html" aria-current="page" class="active sidebar-link">認識串列</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/MyPyThonTeaching/Grammar/List.html#串列" class="sidebar-link">串列</a></li><li class="sidebar-sub-header"><a href="/MyPyThonTeaching/Grammar/List.html#創建串列" class="sidebar-link">創建串列</a></li><li class="sidebar-sub-header"><a href="/MyPyThonTeaching/Grammar/List.html#串列添加" class="sidebar-link">串列添加</a></li><li class="sidebar-sub-header"><a href="/MyPyThonTeaching/Grammar/List.html#串列加乘" class="sidebar-link">串列加乘</a></li><li class="sidebar-sub-header"><a href="/MyPyThonTeaching/Grammar/List.html#串列引用" class="sidebar-link">串列引用</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>深入</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="串列"><a href="#串列" class="header-anchor">#</a> 串列</h2> <h4 id="list"><a href="#list" class="header-anchor">#</a> List</h4> <div class="custom-block tip"><p class="custom-block-title">回顧前章</p> <p>我們都還記得PyThon的Dynamic Array是List，但所有語言List都是Dynamic Array嗎?</p> <p>答案:不是</p> <p>絕大部分高階程式語言都是使用Dynamic Array去實作List，但有極少部分使用Linked List(鏈結串列)去實作，Linked List優點就是Array(不是Dynamic Array)的缺點，其缺點就是Array的優點。</p> <p>比如訪問第三個元素，Array只要帶Index公式就可以得到記憶體位址，但Linked List則必須從第一個元素慢慢往下找，因為Linked List位置是散開來的，第一個節點會記錄當前元素和下一個元素，這種設計優點是插入非常快，因為記憶體位址不需要一樣，而Array插入則必須先把該位子和其後面的原本資料往後移動(保持元素在記憶體是連續的)才可以插入比較浪費時間。</p> <p>詳細可以Google ( Linked List )</p> <p>建議盡量看圖解方式，程式碼實作未必會比較了解原理</p> <p>推薦學習基礎資料結構和演算法的書(沒有程式碼只有原理)</p> <p><a href="https://www.books.com.tw/products/0010771263" target="_blank" rel="noopener noreferrer">演算法圖鑑：26種演算法 + 7種資料結構，人工智慧、數據分析、邏輯思考的原理和應用全圖解<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> <br> <a href="https://www.tenlong.com.tw/products/9789862356319" target="_blank" rel="noopener noreferrer">演算法圖鑑：26種演算法 + 7種資料結構，人工智慧、數據分析、邏輯思考的原理和應用全圖解<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <h4 id="其實我們都已經使用過list了，在呼叫range函式的時候"><a href="#其實我們都已經使用過list了，在呼叫range函式的時候" class="header-anchor">#</a> 其實我們都已經使用過List了，在呼叫Range函式的時候</h4> <h2 id="創建串列"><a href="#創建串列" class="header-anchor">#</a> 創建串列</h2> <p>方法1.</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code>MyList <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>MyList<span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>延伸方式</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code>MyList <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token string">&quot;abcdefg&quot;</span><span class="token punctuation">)</span>  <span class="token comment"># 注意是兩個()</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>MyList<span class="token punctuation">)</span>
+
+<span class="token triple-quoted-string string">&quot;&quot;&quot; 結果說明
+
+['a', 'b', 'c', 'd', 'e', 'f', 'g'] 因為list(Iterable)
+字串就是屬於一種Iterable，而帶進去的Iterable會被拆解開來
+
+&quot;&quot;&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>雷區精華</p> <div class="language-py line-numbers-mode"><div class="highlight-lines"><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div><pre class="language-py"><code><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># &lt;class 'type'&gt; 型別為type 其實就是建構子</span>
+a <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 創建List Type的物件</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment"># [] 這還是List Object</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># &lt;class 'list'&gt; 型別為list 透過List Class創建的的物件</span>
+<span class="token builtin">list</span> <span class="token operator">=</span> <span class="token number">10</span> <span class="token comment"># 覆蓋List的值</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># &lt;class 'int'&gt; list變數的Type為int</span>
+b <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 發生'int' object is not callable</span>
+<span class="token triple-quoted-string string">&quot;&quot;&quot;
+
+1. 觀念 純粹動態語言的任何一切都是物件
+這包含(JavaScript，Python)
+函數(建構子，普通函數，Lambda)，類別等等全部都是物件，大陸稱呼物件為實例或對象
+透過了解一切都是物件，推理出變數存放的值都是物件，那些名稱(list, int, float...)都是變數名
+
+好處
+這種設計可以把函數直接當作變數進行傳遞達到委託(函數篇時在提到)，變數可以存放一切東西
+
+壞處
+會直接覆蓋掉原先定義的函式，在其他語言變數名稱和函式名稱可以分開來不會產生覆蓋問題。
+
+備註
+非純動態語言的動態語言VB就不是了，C / C++ / C# 都是靜態語言自然不是。
+
+結論
+變數list的值從型別的建構子修改成int，也就是第五行做的事情
+
+2. 錯誤訊息解讀 'int' object is not callable
+前面應該看得懂看不懂的應該是callable
+callable意思是可以被呼叫的物件，因此我們可以推導函數是一種可以被呼叫的物件
+
+呼叫
+是指透過Name(Argument...)的方式進行的，可能會有回傳值，亦也可能沒有
+
+&quot;&quot;&quot;</span>
+</code></pre><div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br></div></div><p>方法2.</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code>MyList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>MyList<span class="token punctuation">)</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>延伸方法 - 1</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code>MyList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;abcdefg&quot;</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>MyList<span class="token punctuation">)</span> <span class="token comment"># [&quot;abcdefg&quot;]</span>
+<span class="token triple-quoted-string string">&quot;&quot;&quot;
+語法糖
+[Element, Element, ...] 
+注意是元素(Element)不是迭代物(Iterable)所以不會被拆解(專業術語: 解構)
+&quot;&quot;&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>延伸方法 - 2</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code>MyList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>MyList<span class="token punctuation">)</span> <span class="token comment"># [1, 2, 3, 4, 5]</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><blockquote><p>在這邊想必各位已經會兩種創建List Object的方法了以及避雷</p></blockquote> <h2 id="串列添加"><a href="#串列添加" class="header-anchor">#</a> 串列添加</h2> <p>ListName.append()</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code>MyList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;你好&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;早安&quot;</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>MyList<span class="token punctuation">)</span> <span class="token comment"># [&quot;你好&quot;, &quot;早安&quot;]</span>
+MyList<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">&quot;早餐吃啥&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>MyList<span class="token punctuation">)</span> <span class="token comment"># [&quot;你好&quot;, &quot;早安&quot;, &quot;早餐吃啥&quot;]</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="串列加乘"><a href="#串列加乘" class="header-anchor">#</a> 串列加乘</h2> <div class="language-py line-numbers-mode"><pre class="language-py"><code><span class="token triple-quoted-string string">&quot;&quot;&quot;
+從上述範例我們學到了添加，我們改成加的方式好了
+&quot;&quot;&quot;</span>
+
+MyList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&quot;你好&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;早安&quot;</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">[</span><span class="token string">&quot;早餐吃啥&quot;</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&quot;你好&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;早安&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;早餐吃啥&quot;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token triple-quoted-string string">&quot;&quot;&quot; 
+這是基於Python的List具有可以合併的性質
+&quot;&quot;&quot;</span>
+
+MyList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">10</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>MyList<span class="token punctuation">)</span> <span class="token comment"># [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</span>
+<span class="token triple-quoted-string string">&quot;&quot;&quot;
+時間測試
+100000個0的List
+
+測試環境
+Python 3.8.2 64-bit
+CPU: i9 - 9900k AllCore 5.1GHz
+Ram: 48GB 3200Mhz
+
+1. For And append
+Time: 0.01206839999999998
+
+2. For And List = List + [0]
+Time: 10.084712699999999
+
+3. For And List += [0]
+Time: 0.012439900000000004
+
+4. [0] * 100000
+Time: 0.00036730000000001484
+
+結論假設題目有指定範圍最好先把陣列用乘的創建好
+&quot;&quot;&quot;</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br></div></div><h2 id="串列引用"><a href="#串列引用" class="header-anchor">#</a> 串列引用</h2> <h4 id="引用聽起來很抽象，好聽一點說法，我們變數的值是不是同一個串列-引用同一個記憶體位址"><a href="#引用聽起來很抽象，好聽一點說法，我們變數的值是不是同一個串列-引用同一個記憶體位址" class="header-anchor">#</a> 引用聽起來很抽象，好聽一點說法，我們變數的值是不是同一個串列(引用同一個記憶體位址)</h4> <div class="language-py line-numbers-mode"><pre class="language-py"><code>AList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+BList <span class="token operator">=</span> AList
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">id</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">id</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span><span class="token punctuation">)</span> 
+<span class="token comment"># AList的值所在記憶體位址，BList的值記憶體所在位址，AList和BList是否同一個記憶體位址</span>
+AList<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">&quot;我是AList的添加物&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span> <span class="token comment"># ['我是AList的添加物']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span> <span class="token comment"># ['我是AList的添加物']</span>
+BList<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">&quot;我是BList的添加物&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span> <span class="token comment"># ['我是AList的添加物', '我是BList的添加物']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span> <span class="token comment"># ['我是AList的添加物', '我是BList的添加物']</span>
+<span class="token triple-quoted-string string">&quot;&quot;&quot; 
+第一段 AList = 創建一個List Object
+第二段 BList = 引用AList 的 Object
+所以AList和Blist是引用同個Object
+所以凡是對這個Object的操作比如append都會影響AList和BList的值
+
+專業說法:引用同個reference(參考) 即 引用同個記憶體位址，所以操作AList和BList都是操作同個記憶體位址
+
+id(值) 回傳該值記憶體位址
+&quot;&quot;&quot;</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>雷區 +=</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code>AList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+BList <span class="token operator">=</span> AList
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">id</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span><span class="token punctuation">)</span> 
+AList <span class="token operator">+=</span> <span class="token punctuation">[</span><span class="token string">&quot;我是AList的添加物&quot;</span><span class="token punctuation">]</span> <span class="token comment"># True</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span> <span class="token comment"># ['我是AList的添加物']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span> <span class="token comment"># ['我是AList的添加物']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">id</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># True</span>
+BList <span class="token operator">+=</span> <span class="token punctuation">[</span><span class="token string">&quot;我是BList的添加物&quot;</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span> <span class="token comment"># ['我是AList的添加物', '我是BList的添加物']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span> <span class="token comment"># ['我是AList的添加物', '我是BList的添加物']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">id</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># True</span>
+
+<span class="token triple-quoted-string string">&quot;&quot;&quot; 
++= 不會解除引用同個參考的關係
+
+&quot;&quot;&quot;</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>雷區 a = a + []</p> <div class="language-py line-numbers-mode"><pre class="language-py"><code>AList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+BList <span class="token operator">=</span> AList
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">id</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span><span class="token punctuation">)</span> 
+AList <span class="token operator">=</span> AList <span class="token operator">+</span> <span class="token punctuation">[</span><span class="token string">&quot;我是AList的添加物&quot;</span><span class="token punctuation">]</span> <span class="token comment"># True</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span> <span class="token comment"># ['我是AList的添加物']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span> <span class="token comment"># []</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">id</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># False</span>
+BList <span class="token operator">=</span> BList <span class="token operator">+</span> <span class="token punctuation">[</span><span class="token string">&quot;我是BList的添加物&quot;</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span> <span class="token comment"># ['我是AList的添加物', '我是BList的添加物']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span> <span class="token comment"># ['我是BList的添加物']</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>AList<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token builtin">id</span><span class="token punctuation">(</span>BList<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># False</span>
+
+<span class="token triple-quoted-string string">&quot;&quot;&quot; 
++或是* 會創建新的Object
+這也可以解釋上面的時間測試為啥會那某久
+所以建議盡量避免使用操作符(+, *, +=)，除了在創建串列物件的時候
+&quot;&quot;&quot;</span> 
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/MyPyThonTeaching/Grammar/Container.html" class="prev">
+        認識容器
+      </a></span> <span class="next"><a href="/MyPyThonTeaching/Thorough/Type.html">
+        型別
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/MyPyThonTeaching/assets/js/app.f3386733.js" defer></script><script src="/MyPyThonTeaching/assets/js/2.4d2fb9ce.js" defer></script><script src="/MyPyThonTeaching/assets/js/12.37d34a44.js" defer></script>
+  </body>
+</html>
